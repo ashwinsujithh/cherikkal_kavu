@@ -221,10 +221,113 @@ body {
 	object-fit: cover; 
 	border-radius: 10px;
 	display: block;
+	/* border: 2px solid #FF6B35; */
 }
 
-.gallery-item {
+/* .gallery-item {
 	text-align: center;
+	border: 1px solid rgba(255,255,255,0.15);
+	border-radius: 12px;
+	padding: 10px;
+	background: rgba(255,255,255,0.02);
+	transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+	border-color: #FF6B35;
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+} */
+
+.gallery-item {
+	position: relative;
+	text-align: center;
+	border-radius: 12px;
+	padding: 10px;
+	background: rgba(255,255,255,0.02);
+	overflow: hidden;
+	transition: transform 0.3s ease;
+}
+
+/* base subtle border */
+.gallery-item::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 12px;
+	padding: 1px;
+	background: rgba(255,255,255,0.1);
+	-webkit-mask: 
+		linear-gradient(#000 0 0) content-box, 
+		linear-gradient(#000 0 0);
+	-webkit-mask-composite: xor;
+	mask: 
+		linear-gradient(#000 0 0) content-box, 
+		linear-gradient(#000 0 0);
+	mask-composite: exclude;
+}
+
+/* welding effect layer */
+.gallery-item::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 12px;
+	padding: 2px;
+
+	background: linear-gradient(
+		120deg,
+		transparent 0%,
+		transparent 30%,
+		#FF6B35 50%,
+		transparent 70%,
+		transparent 100%
+	);
+
+	background-size: 200% 200%;
+
+	opacity: 0;
+
+	-webkit-mask: 
+		linear-gradient(#000 0 0) content-box, 
+		linear-gradient(#000 0 0);
+	-webkit-mask-composite: xor;
+	mask: 
+		linear-gradient(#000 0 0) content-box, 
+		linear-gradient(#000 0 0);
+	mask-composite: exclude;
+}
+
+/* hover triggers welding */
+.gallery-item:hover::after {
+	opacity: 1;
+	animation: weldingMove 1.2s linear infinite;
+}
+
+/* motion */
+@keyframes weldingMove {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 200% 50%;
+	}
+}
+
+/* lift effect */
+.gallery-item:hover {
+	transform: translateY(-5px);
+}
+
+.gallery-item:hover::after {
+	opacity: 1;
+	animation: weldingMove 1.2s linear infinite, flicker 0.2s infinite alternate;
+	filter: drop-shadow(0 0 6px #FF6B35);
+}
+
+@keyframes flicker {
+	from { opacity: 0.6; }
+	to { opacity: 1; }
 }
 
 /* CAPTION */
