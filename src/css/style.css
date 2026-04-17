@@ -517,3 +517,146 @@ body {
 	height: 100%;
 	border: 0;
 }
+
+/* MODAL BACKDROP */
+.modal {
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,0.85);
+	backdrop-filter: blur(10px);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s ease;
+
+	z-index: 999;
+}
+
+/* ACTIVE STATE */
+.modal.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* MODAL CONTENT */
+.modal-content {
+	background: #111;
+	padding: 30px;
+	max-width: 650px;
+	width: 90%;
+	max-height: 80vh;
+	overflow-y: auto;
+
+	border-radius: 14px;
+	color: #F5E6C8;
+	position: relative;
+
+	border: 1px solid rgba(255,255,255,0.08);
+	box-shadow: 0 0 30px rgba(255,107,53,0.25);
+
+	transform: scale(0.9);
+	transition: 0.3s ease;
+}
+
+/* SCALE IN */
+.modal.active .modal-content {
+	transform: scale(1);
+}
+
+/* ========================= */
+/* HEADER ROW (KEY CHANGE) */
+/* ========================= */
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 15px;
+}
+
+/* TITLE */
+#modalTitle {
+	font-size: 20px;
+	color: #F5E6C8;
+	flex: 1;
+
+	/* prevents breaking layout */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* ACTION GROUP */
+.modal-actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+/* TRANSLATE BUTTON */
+#translateBtn {
+	background: rgba(255,107,53,0.1);
+	border: 1px solid rgba(255,107,53,0.5);
+	color: #FF6B35;
+	padding: 5px 12px;
+	border-radius: 20px;
+	font-size: 11px;
+	cursor: pointer;
+	letter-spacing: 1px;
+	transition: all 0.25s ease;
+}
+
+#translateBtn:hover {
+	background: #FF6B35;
+	color: #111;
+	box-shadow: 0 0 10px #FF6B35;
+}
+
+#translateBtn:active {
+	transform: scale(0.95);
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+	font-size: 22px;
+	color: #FF6B35;
+	cursor: pointer;
+	transition: 0.2s ease;
+}
+
+.close-btn:hover {
+	transform: scale(1.2);
+}
+
+/* ========================= */
+/* BODY */
+/* ========================= */
+
+#modalBody {
+	white-space: pre-line;
+	line-height: 1.6;
+	margin-top: 10px;
+	color: #ddd;
+}
+
+/* ========================= */
+/* SCROLLBAR */
+/* ========================= */
+
+.modal-content::-webkit-scrollbar {
+	width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+	background: rgba(255,107,53,0.5);
+	border-radius: 10px;
+}

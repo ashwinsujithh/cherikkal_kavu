@@ -9,6 +9,23 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam&display=swap" rel="stylesheet">
 </head>
 
+<div class="modal" id="theyyamModal">
+	<div class="modal-content">
+
+		<div class="modal-header">
+			<h2 id="modalTitle"></h2>
+
+			<div class="modal-actions">
+				<button id="translateBtn">EN</button>
+				<span class="close-btn">&times;</span>
+			</div>
+		</div>
+
+		<p id="modalBody"></p>
+
+	</div>
+</div>
+
 <body>
 
 	<!-- NAVBAR -->
@@ -57,26 +74,136 @@
 
 	<!-- GALLERY -->
 	<section class="gallery">
-		<h2>തെയ്യ <span class="highlight">കോലങ്ങൾ<span><br><span class="subtitle">( Theyyam Manifestations)<span></h2>
+		<h2>തെയ്യ <span class="highlight">കോലങ്ങൾ</span><br><span class="subtitle">( Theyyam Manifestations)</span></h2>
 
 		<div class="gallery-grid">
 
-			<div class="gallery-item">
+			<div class="gallery-item welding-card"
+				data-title="വീരാളി (Veerali)"
+				data-content-ml="വീരാളി തെയ്യം ശക്തിയുടെയും അഗ്നിയുടെയും പ്രതീകമാണ്. 
+				ഇത് ഒരു വീരസ്വരൂപ ദൈവമായി കണക്കാക്കപ്പെടുന്നു, ദുഷ്ടശക്തികളെ നശിപ്പിച്ച് ഗ്രാമത്തെ സംരക്ഷിക്കുന്ന രക്ഷാധികാരി.
+
+				ചരിത്രം:
+				വീരാളി തെയ്യം പ്രാദേശിക വീരന്മാരുടെയും ദൈവിക ശക്തികളുടെയും സംയോജനമായാണ് രൂപപ്പെട്ടത്. 
+				കാലക്രമേണ ഇത് ഭഗവതി/ശിവന്റെ ഉഗ്രസ്വരൂപവുമായി ബന്ധിപ്പിക്കപ്പെട്ടു.
+
+				ഉത്ഭവം:
+				ഉത്തര മലബാർ പ്രദേശങ്ങളിലെ കാവുകളിൽ നിന്നാണ് ഈ കോലം ഉദ്ഭവിച്ചത്. 
+				അഗ്നി ചടങ്ങുകൾ അതിന്റെ പ്രധാന ഭാഗമാണ്.
+
+				എന്തുകൊണ്ട് ദൈവമായി:
+				തെയ്യം സമയത്ത് കലാകാരൻ ദൈവമായി മാറുന്നു എന്ന് വിശ്വാസം. 
+				ഭക്തർക്ക് അനുഗ്രഹം നൽകുകയും പ്രശ്നങ്ങൾക്ക് പരിഹാരം പറയുകയും ചെയ്യുന്നു."
+					data-content-en="Veerali Theyyam represents power and fire. 
+				It is considered a warrior deity who protects the village by destroying evil forces.
+
+				History:
+				Veerali Theyyam emerged from a fusion of local warrior legends and divine energy. 
+				Over time, it became associated with the fierce forms of Bhagavathi and Shiva.
+
+				Origin:
+				This form originated from sacred groves (kavus) in North Malabar. 
+				Fire rituals are a major part of its performance.
+
+				Why worshipped as a deity:
+				During the ritual, the performer is believed to become the deity. 
+				Devotees seek blessings and solutions to their problems.">
+
 				<img src="./src/img/deity_1.png">
 				<p>വീരാളി ( Veerali )</p>
 			</div>
 
-			<div class="gallery-item">
+			<div class="gallery-item welding-card"
+				data-title="പുതിയ ഭഗവതി (Puthiya Bhagavathy)"
+				data-content-ml="പുതിയ ഭഗവതി തെയ്യം ശക്തിയുടെയും മാതൃത്വത്തിന്റെയും പ്രതീകമാണ്. 
+				ഇത് ഗ്രാമദേവിയായി ആരാധിക്കപ്പെടുന്നു, ഭക്തർക്കു അനുഗ്രഹവും സംരക്ഷണവും നൽകുന്ന ദേവി.
+
+				ചരിത്രം:
+				പുതിയ ഭഗവതി പ്രാദേശിക വിശ്വാസങ്ങളുടെയും ദേവീ ആരാധനയുടെയും ഭാഗമായി രൂപപ്പെട്ടു. 
+				കാലക്രമേണ ഇത് ശക്തി ഉപാസനയുടെ പ്രധാന രൂപമായി മാറി.
+
+				ഉത്ഭവം:
+				ഉത്തര കേരളത്തിലെ കാവുകളിലും തറവാടുകളിലും നിന്നാണ് ഈ തെയ്യം ഉദ്ഭവിച്ചത്.
+
+				എന്തുകൊണ്ട് ദൈവമായി:
+				തെയ്യം സമയത്ത് ദേവി സ്വയം പ്രത്യക്ഷപ്പെടുന്നു എന്ന് വിശ്വാസം. 
+				ഭക്തരുടെ പ്രാർത്ഥനകൾക്ക് ഉത്തരം നൽകുകയും അനുഗ്രഹം നൽകുകയും ചെയ്യുന്നു."
+					data-content-en="Puthiya Bhagavathy Theyyam symbolizes divine power and motherhood. 
+				She is worshipped as the village goddess who grants protection and blessings.
+
+				History:
+				This form evolved from local traditions of goddess worship. 
+				Over time, it became an important representation of Shakti worship.
+
+				Origin:
+				It originated from sacred groves and ancestral homes in North Kerala.
+
+				Why worshipped as a deity:
+				It is believed that the goddess manifests during the ritual. 
+				Devotees receive blessings and answers to their prayers.">
+
 				<img src="./src/img/background_img.png">
-				<p>പുതിയ ഭഗവതി ( Puthiya bagavathy )</p>
+				<p>പുതിയ ഭഗവതി ( Puthiya Bhagavathy )</p>
 			</div>
 
-			<div class="gallery-item">
+			<div class="gallery-item welding-card"
+				data-title="വീരൻ (Veeran)"
+				data-content-ml="വീരൻ തെയ്യം ധൈര്യത്തിന്റെയും വീരത്വത്തിന്റെയും പ്രതീകമാണ്. 
+				ഗ്രാമത്തെ സംരക്ഷിക്കുന്ന ഒരു രക്ഷാധികാരിയായി ഈ ദൈവം ആരാധിക്കപ്പെടുന്നു.
+
+				ചരിത്രം:
+				പ്രാദേശിക വീരന്മാരുടെ കഥകളിൽ നിന്നാണ് വീരൻ തെയ്യം രൂപം കൊണ്ടത്. 
+				അവരുടെ ധൈര്യവും ബലിയർപ്പണവും ദൈവിക രൂപമായി മാറി.
+
+				ഉത്ഭവം:
+				ഉത്തര മലബാറിലെ കാവുകളിലും കുടുംബാരാധനയിലും നിന്നാണ് ഇതിന്റെ ഉത്ഭവം.
+
+				എന്തുകൊണ്ട് ദൈവമായി:
+				വീരൻ തെയ്യം ദുഷ്ടശക്തികളെ അകറ്റി ഗ്രാമത്തെ സംരക്ഷിക്കുന്നു എന്ന് വിശ്വാസം."
+					data-content-en="Veeran Theyyam represents bravery and heroism. 
+				He is worshipped as a guardian deity who protects the village.
+
+				History:
+				This Theyyam originated from stories of local warriors. 
+				Their courage and sacrifice were later deified.
+
+				Origin:
+				It comes from sacred groves and family traditions in North Malabar.
+
+				Why worshipped as a deity:
+				Veeran is believed to drive away evil forces and safeguard the community.">
+
 				<img src="./src/img/deity_2.png">
 				<p>വീരൻ ( Veeran )</p>
 			</div>
 
-			<div class="gallery-item">
+			<div class="gallery-item welding-card"
+				data-title="ഗുലികൻ (Gulikan)"
+				data-content-ml="ഗുലികൻ തെയ്യം കാലത്തിന്റെയും മരണത്തിന്റെയും പ്രതീകമാണ്. 
+				ഇത് ശക്തമായ ഒരു ദൈവരൂപമായി കണക്കാക്കപ്പെടുന്നു.
+
+				ചരിത്രം:
+				ഗുലികൻ ശനിദേവനുമായി ബന്ധപ്പെട്ട ദൈവമായി വിശ്വസിക്കപ്പെടുന്നു. 
+				പ്രാദേശിക വിശ്വാസങ്ങളിലൂടെ ഇത് തെയ്യമായി രൂപപ്പെട്ടു.
+
+				ഉത്ഭവം:
+				ഉത്തര കേരളത്തിലെ കാവുകളിലാണ് ഗുലികൻ തെയ്യം പ്രധാനമായും അവതരിപ്പിക്കുന്നത്.
+
+				എന്തുകൊണ്ട് ദൈവമായി:
+				ഗുലികൻ തെയ്യം ദോഷങ്ങൾ നീക്കി ജീവിതത്തിൽ സമതുലിതാവസ്ഥ നൽകുന്നു എന്ന് വിശ്വാസം."
+					data-content-en="Gulikan Theyyam represents time and death. 
+				It is considered a powerful and intense deity form.
+
+				History:
+				Gulikan is believed to be associated with Lord Shani. 
+				It evolved into a Theyyam form through local traditions.
+
+				Origin:
+				This Theyyam is mainly performed in sacred groves of North Kerala.
+
+				Why worshipped as a deity:
+				Gulikan is believed to remove negative influences and restore balance in life.">
+
 				<img src="./src/img/deity_3.png">
 				<p>ഗുലികൻ ( Gulikan )</p>
 			</div>
